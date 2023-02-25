@@ -1,0 +1,13 @@
+<div class="fixed top-0 flex justify-between px-4 py-4 h-18 w-full bg-white z-10">
+    <img src="../../../assets/img/foxbel-music-icon.png" alt="logo" class="w-10 block md:hidden">
+    <div class="flex items-center border border-spacing-1 py-1 px-3 border-gray_foxbel rounded-full pl-4 md:ml-[21rem] w-56 md:w-80 lg:w-[32.75rem]">
+        <input type="search" [(ngModel)]="text_search" (keyup)="searchSongs()" class="font-16-regular w-full" placeholder="Buscar">
+        <i class="fas fa-search text-soft_gray"></i>
+    </div>
+    <!-- <button class="bg-primary rounded-md px-2 text-white" (click)="login()">Permisos</button> -->
+    <!-- <button class="border border-spacing-1 border-primary rounded-md px-2 text-primary" (click)="obtenerToken()">Login</button> -->
+    <div class="flex items-center">
+        <i class="fas fa-user px-1 text-primary"></i>
+        <span class="hidden md:block px-1 font-16-regular text-gray_foxbel">Francisco M.</span>
+    </div>
+</div>

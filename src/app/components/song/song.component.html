@@ -1,0 +1,9 @@
+<div class="w-full md:w-40">
+    <div class="relative h-40">
+        <i class="fas fa-play w-full h-full absolute top-0 left-0 flex justify-center items-center text-4xl text-white cursor-pointer" (click)="selectedSong()"></i>
+        <i class="fas fa-ellipsis-v absolute top-2 right-2 text-white cursor-pointer"></i>
+        <img [src]="track.album.cover_medium" alt="song" class="w-full h-full">
+    </div>
+    <h2 class="font-14-bold">{{ track.title }}</h2>
+    <span class="font-12-regular-qs text-gray_foxbel">{{ track.artist.name }}</span>
+</div>

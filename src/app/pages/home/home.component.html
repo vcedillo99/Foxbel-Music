@@ -1,0 +1,27 @@
+<div class="ml-0 md:ml-80 mt-16 mb-24 p-4 md:p-8">
+    <div class="flex lg:h-64 mb-8">
+        <img [src]="tracks[0] ? tracks[0].album.cover_big : ''" alt="portada" class="bg-soft_gray w-36 h-36 md:w-52 md:h-52 lg:md-64 lg:h-64">
+        <div class="bg-light_red text-white px-2 py-4 md:px-6 md:py-8 grid grid-cols-1 content-around w-full relative">
+            <div>
+                <h2 class="font-22-bold">{{ tracks[0] ? tracks[0].title : ''}}</h2>
+                <div class="block md:flex">
+                    <p class="font-14-regular md:mr-2">Lo mejor de {{ '' || artist.name }}</p>
+                    <p class="text-secondary text-xs">{{ '' || artist.nb_fan }} seguidores</p>
+                </div>
+            </div>
+            <p class="font-12-regular-lh20 hidden md:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur rerum commodi 
+                odio! Minus quod consectetur quaerat quibusdam itaque, magnam pariatur amet 
+                dignissimos quo reiciendis tempora vero cum vel animi.</p>
+            <div class="grid grid-cols-12 gap-2 md:gap-4 items-center">
+                <button class="rounded-full col-span-6 md:col-span-3 bg-primary py-2 font-14-regular">Reproducir</button>
+                <button class="rounded-full col-span-4 md:col-span-3 border-spacing-1 border border-primary text-primary py-2 font-14-regular">Seguir</button>
+                <i class="fas fa-ellipsis-h col-span-2 md:col-span-1 absolute md:relative top-2 right-2"></i>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="mb-4 text-primary font-22-bold">Resultados</h1>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <app-song *ngFor="let track of tracks; let i = index" [track]="track" [index]="i"></app-song>
+    </div>
+</div>

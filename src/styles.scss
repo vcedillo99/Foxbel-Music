@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: Quicksand;
+    src: url(assets/font/Quicksand_Book.otf) format("opentype");
+}
+
+* {
+    font-family: 'Quicksand', 'arial', sans-serif;
+    
+    button, input, optgroup, select, textarea {
+        outline: none;
+        font-family: 'Quicksand', 'arial', sans-serif;
+    }
+}
+
+.font-16-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    // line-height: 20px;
+}
+
+.font-22-bold {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.font-14-regular {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.font-12-regular-lh20 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.font-14-bold {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.font-12-regular-qs {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}

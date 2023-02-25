@@ -1,0 +1,21 @@
+<div class="bg-primary w-screen fixed bottom-0 left-0 flex shadow-player z-30">
+    <img [src]="track_selected ? track_selected.album.cover_medium : '../../../assets/img/foxbel-music-white-icon.png'" alt="portada" class="bg-soft_gray w-20 h-20 md:w-28 md:h-28">
+    <div class="grid grid-cols-12 gap-2 md:gap-4 items-center w-full py-2 px-4 md:py-4 md:px-8">
+        <div class="text-white col-span-8 md:col-span-5">
+            <h2 class="font-14-bold">{{track_selected ? track_selected.title : 'Canción'}}</h2>
+            <span class="font-12-regular-qs">{{ track_selected ? track_selected.artist.name : 'Artista - Album'}}</span>
+        </div>
+        <div class="grid grid-cols-12 gap-1 md:gap-4 items-center w-24 md:w-40 text-white col-span-4 md:col-span-5">
+            <i class="fas fa-step-backward text-base md:text-xl cursor-pointer col-span-3 md:col-span-3"></i>
+            <i *ngIf="!state.playing; else elsepause" class="fas fa-play text-base md:text-xl rounded-full bg-light_red w-10 h-10 md:w-16 md:h-16 flex justify-center items-center cursor-pointer col-span-6" (click)="play()"></i>
+            <ng-template #elsepause>
+                <i class="fas fa-pause text-base md:text-xl rounded-full bg-light_red w-10 h-10 md:w-16 md:h-16 flex justify-center items-center cursor-pointer col-span-6" (click)="pause()"></i>
+            </ng-template>
+            <i class="fas fa-step-forward text-base md:text-xl cursor-pointer col-span-3 md:col-span-3"></i>
+        </div>
+        <div class="hidden md:flex justify-between w-40 text-white col-span-2">
+            <input type="range" [value]="0.2" min="0" max="1" step="0.01" (change)="slideVolume($event)">
+            <i class="fas fa-volume-up"></i>
+        </div>
+    </div>
+</div>
